@@ -1,5 +1,5 @@
 # Hadoop-MapReduce
-<p align="justify">In this repository located files with realization of Hadoop MapReduce technology on Java</p>
+<p align="justify">In this repository files are located whose realize Hadoop MapReduce technology on Java!</p>
 
 <h1>О работе</h1>
 <p align="justify">В этой работе я с одногруппниками в рамках учёбы в университете выполняли задания по <b>"Методам BigData"</b> — так называется сама дисциплина. Эти задания были на тему эффективной обработки данных больших объёмов. Мы изучали инструмент под названием <b>"Hadoop"</b>, который используют многие популярные компании, типа, <i>Facebook</i>, <i>Amazon</i>, <i>Yahoo</i> и многие другие коммерческие и некоммерческие объединения специалистов в этой области. Этот инструмент как раз и позволяет очень хорошо и быстро загрузить, обработать и сохранить разные данные на сервера организаций.</p>
