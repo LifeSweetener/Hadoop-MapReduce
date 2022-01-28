@@ -12,7 +12,7 @@
 <h2>Оглавление</h2>
 <ul>
  <li><a href="#theory">Теоретическое введение</a></li>
- <ol>
+ <ol type="1">
   <li><a href="#theory1">История и главные черты Hadoop</a></li>
   <li><a href="#theory2">Модель программирования MapReduce в Hadoop</a></li>
   <li><a href="#theory3">Обработка реляционных данных в экосистеме Hadoop</a></li>
