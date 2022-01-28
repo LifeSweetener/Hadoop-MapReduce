@@ -230,7 +230,7 @@ Hive — которая, в свою очередь, влияет на возм�
 
 <p align="justify">Функции Map и Reduce реализуются в Java в виде классов с соответствующими методами. У меня в проекте это классы <code>MyMapper</code> и <code>MyReducer</code>:</p>
 
-<p align="center">
+<p align="left">
  <code>public static class <b>MyMapper</b> extends Mapper<Object, Text, Text, IntWritable> {</code><br><br>
         
   <code>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>map</b>(Object key, Text value, Context context) throws IOException, InterruptedException {</code><br><br>
