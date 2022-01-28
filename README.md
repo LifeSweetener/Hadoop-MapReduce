@@ -215,6 +215,36 @@ Hive — которая, в свою очередь, влияет на возм�
 </ol>
 </p>
 
+<p align="justify">Следует вам немного объяснить содержние кода. Вообще справочник по программиованию MapReduce на Java есть на официальном сайте https://hadoop.apache.org/docs/current/api/index.html. Здесь есть описание всех методов и классов предоставляемого программисту API.</p>
+
+<p align="justify">В Java для работы с Hadoop MapReduce предусмотрены специальные классы, созданные поверх основных, нативных классов Java, но пригодных для хранения и обработки уже непосредственно в Hadoop. Это классы например <code>IntWritable</code>, который хранит в себе обычное целое число, но пригодное для чтения и записи в систему HDFS; класс <code>Text</code>, который представляет собой обычную строку, но с возможностью сохранить её в HDFS.</p>
+
+<p align="justify">"Обернуть" обычную Java-строку класса <code>String</code> в объект <code>Text</code> можно таким способом:</p>
+
+<p align="center">
+ <code>String str = <b>"Текст в Хадупе!"</b></code><br>
+ <code>Text hdfs_str = new Text(str);</code>
+</p>
+
+<p align="justify">То есть <code>String</code> просто засовывается в конструктор класса <code>Text</code>.</p>
+
+<p align="justify">Функции Map и Reduce реализуются в Java в виде классов с соответствующими методами. У меня в проекте это классы <code>MyMapper</code> и <code>MyReducer</code>:</p>
+
+<p align="center">
+ <code>public static class <b>MyMapper</b> extends Mapper<Object, Text, Text, IntWritable> {</code><br><br>
+        
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>map</b>(Object key, Text value, Context context) throws IOException, InterruptedException {</code><br><br>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КАКОЙ-ТО КОД МЕТОДА...</code><br><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+    <code>}</code><br><br>
+
+  <code>public static class <b>MyReducer</b> extends Reducer<Text, IntWritable, Text, IntWritable> {</code>
+    
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>reduce</b>(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {</code>
+      <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КАКОЙ-ТО КОД МЕТОДА...</code><br><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code>
+  <code>}</code>
+</p>
 
 <h2 name="sources">Список использованной литературы</h2>
 <ol type="1">
