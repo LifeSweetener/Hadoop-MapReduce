@@ -236,7 +236,7 @@ Hive — которая, в свою очередь, влияет на возм�
 
 <p align="justify">Функции Map и Reduce реализуются в Java в виде классов с соответствующими методами. У меня в проекте это классы <code>MyMapper</code> и <code>MyReducer</code>:</p>
 
-<table><tr><td>
+<table align="center"><tr><td>
 <p align="left">
  <code>public static class <b>MyMapper</b> extends Mapper&lt;Object, Text, Text, IntWritable&gt; {</code><br>
         
@@ -278,6 +278,7 @@ Hive — которая, в свою очередь, влияет на возм�
 
 <h2 name="ps">Примечание</h2>
 <p align="justify">Про остальные две лабораторные работы: первую и третью, — смотрите в приложенных к репозиторию документах в папке "docs"! Там лежат отчёты по ним, предназначенные для показа преподавателю как результатов работы по "Методам BigData".</p>
+<p align="justify">И замечу ещё одну важную вещь — в методичке моего преподавателя А.С. Лебедева [<a href="#lit1">1</a>] также описан точный порядок установки Hadoop, Hive, Pig и других подобных инструментов в ОС Linux (в рамках нашего курса мы работали в CentOS 7). Она находится в этом репозитории в том же каталоге "docs".</p>
 
 <h2 name="sources">Список использованной литературы</h2>
 <ol type="1">
@@ -285,4 +286,6 @@ Hive — которая, в свою очередь, влияет на возм�
  <li>Apache Pig // Wikipedia URL: https://en.wikipedia.org/wiki/Apache_Pig (дата обращения: 28.01.2022).</li>
  <li>Lecture #4: HITS Algorithm - Hubs and Authorities on the Internet // The Department of Mathematics URL: http://pi.math.cornell.edu/~mec/Winter2009/RalucaRemus/Lecture4/lecture4.html (дата обращения: 28.01.2022).</li>
  <li>Hadoop, часть 3: Pig, обработка данных // Хабр URL: https://habr.com/ru/company/selectel/blog/215307/ (дата обращения: 28.01.2022).</li>
+ <li>MapReduce Tutorial // APACHE hadoop URL: https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html (дата обращения: 28.01.2022).</li>
+ <li>hadoop.mapred vs hadoop.mapreduce? // stackoverflow URL: https://stackoverflow.com/questions/16269922/hadoop-mapred-vs-hadoop-mapreduce (дата обращения: 28.01.2022).</li>
 </ol>
