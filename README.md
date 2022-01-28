@@ -231,16 +231,16 @@ Hive — которая, в свою очередь, влияет на возм�
 <p align="justify">Функции Map и Reduce реализуются в Java в виде классов с соответствующими методами. У меня в проекте это классы <code>MyMapper</code> и <code>MyReducer</code>:</p>
 
 <p align="left">
- <code>public static class <b>MyMapper</b> extends Mapper/<Object, Text, Text, IntWritable/> {</code><br><br>
+ <code>public static class <b>MyMapper</b> extends Mapper&lt;Object, Text, Text, IntWritable&gt; {</code><br><br>
         
   <code>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>map</b>(Object key, Text value, Context context) throws IOException, InterruptedException {</code><br><br>
   <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КАКОЙ-ТО КОД МЕТОДА...</code><br><br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
     <code>}</code><br><br>
 
-  <code>public static class <b>MyReducer</b> extends Reducer/<Text, IntWritable, Text, IntWritable/> {</code>
+  <code>public static class <b>MyReducer</b> extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt; {</code>
     
-  <code>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>reduce</b>(Text key, Iterable/<IntWritable/> values, Context context) throws IOException, InterruptedException {</code>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>reduce</b>(Text key, Iterable&lt;IntWritable&gt; values, Context context) throws IOException, InterruptedException {</code>
       <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КАКОЙ-ТО КОД МЕТОДА...</code><br><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code>
   <code>}</code>
